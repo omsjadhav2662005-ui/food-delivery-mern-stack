@@ -19,19 +19,6 @@ The Admin Panel enables administrators to manage food items and track customer o
 
 ---
 
-## 🏗 Project Structure
-
-
-Food-Delivery-Website/
-│
-├── backend/ # Node.js + Express API
-├── admin/ # Admin Panel (React + Vite)
-├── delivery/ # Customer Frontend (React + Vite)
-└── README.md
-
-
----
-
 ## 🚀 Features
 
 ### 👤 Customer (Delivery Website)
