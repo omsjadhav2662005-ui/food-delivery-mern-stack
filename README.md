@@ -1,101 +1,94 @@
-🍔 Food Delivery Website (MERN Stack)
+# 🍔 Food Delivery Website (MERN Stack)
 
-A full-stack Food Delivery Web Application built using the MERN Stack (MongoDB, Express.js, React.js, Node.js).
-The project includes:
+A full-stack Food Delivery Web Application built using the **MERN Stack (MongoDB, Express.js, React.js, Node.js)**.
 
-👨‍💼 Admin Panel
+This project includes:
+- 🖥 Backend REST API
+- 👨‍💼 Admin Dashboard
+- 👤 Customer (Delivery) Website
+- 💳 Stripe Payment Integration
+- ☁ MongoDB Atlas Database
 
-👤 Customer (Delivery) Website
+---
 
-🖥 Backend API
+## 📌 Project Overview
 
-💳 Stripe Payment Integration
+The Food Delivery Website allows customers to browse food items, add them to cart, and place orders securely using Stripe payments.  
 
-☁ MongoDB Atlas Database
+The Admin Panel enables administrators to manage food items and track customer orders.
 
-📁 Project Structure
+---
+
+## 🏗 Project Structure
+
+
 Food-Delivery-Website/
 │
-├── admin/        → Admin Panel (React + Vite)
-├── backend/      → Backend Server (Node + Express + MongoDB)
-├── delivery/     → Customer Frontend (React + Vite)
+├── backend/ # Node.js + Express API
+├── admin/ # Admin Panel (React + Vite)
+├── delivery/ # Customer Frontend (React + Vite)
 └── README.md
-🚀 Features
-👤 Customer (Delivery Website)
 
-Browse food items
 
-Add to cart
+---
 
-User authentication (JWT)
+## 🚀 Features
 
-Place orders
+### 👤 Customer (Delivery Website)
+- User registration & login (JWT Authentication)
+- Browse food items
+- Add to cart
+- Place orders
+- Stripe payment integration
+- View order history
 
-Stripe payment integration
+### 👨‍💼 Admin Panel
+- Add new food items
+- Upload food images
+- View all orders
+- Update order status
+- Manage food items
 
-View order history
+### 🖥 Backend API
+- RESTful API architecture
+- MongoDB Atlas integration
+- Secure password hashing (bcrypt)
+- JWT-based authentication
+- Stripe payment handling
+- Image upload with Multer
 
-👨‍💼 Admin Panel
+---
 
-Add new food items
+## 🛠 Tech Stack
 
-Upload food images
+### Frontend
+- React.js
+- Vite
+- Axios
+- React Router
 
-View all orders
+### Backend
+- Node.js
+- Express.js
+- MongoDB Atlas
+- Mongoose
+- JWT (Authentication)
+- Bcrypt (Password Hashing)
+- Stripe (Payments)
+- Multer (File Upload)
+- Dotenv (Environment Variables)
 
-Update order status
+---
 
-Manage food items
+# ⚙️ Installation & Setup
 
-🖥 Backend API
+## 1️⃣ Clone the Repository
 
-RESTful API
-
-MongoDB Atlas connection
-
-JWT Authentication
-
-Stripe payment handling
-
-Image upload using Multer
-
-🛠 Tech Stack
-Frontend
-
-React.js
-
-Vite
-
-Axios
-
-React Router
-
-Backend
-
-Node.js
-
-Express.js
-
-MongoDB Atlas
-
-Mongoose
-
-JWT
-
-Bcrypt
-
-Stripe
-
-Multer
-
-Dotenv
-
-⚙️ Installation & Setup Guide
-1️⃣ Clone Repository
+```bash
 git clone https://github.com/your-username/Food-Delivery-Website.git
 cd Food-Delivery-Website
 🖥 Backend Setup
-Step 1: Go to backend folder
+Step 1: Navigate to backend
 cd backend
 Step 2: Install dependencies
 npm install
@@ -107,12 +100,12 @@ STRIPE_SECRET_KEY=your_stripe_secret_key
 Step 4: Start backend server
 npm start
 
-Server runs on:
+Backend runs at:
 
 http://localhost:5000
 👨‍💼 Admin Panel Setup
 
-Open new terminal:
+Open a new terminal:
 
 cd admin
 npm install
@@ -146,26 +139,26 @@ npm run dev
 Runs on:
 
 http://localhost:5174
-🌐 MongoDB Atlas Setup
+🌐 MongoDB Atlas Configuration
 
-Create account on MongoDB Atlas
+Create a MongoDB Atlas account
 
-Create cluster (Free M0)
+Create a Free M0 Cluster
 
-Create Database User
+Add Database User
 
-Add IP Address (0.0.0.0/0 for development)
+Allow Network Access (0.0.0.0/0 for development)
 
-Get connection string
+Copy connection string
 
 Add it to backend .env
 
 Example:
 
-mongodb+srv://username:password@cluster0.mongodb.net/foodApp?retryWrites=true&w=majority
-💳 Stripe Setup
+mongodb+srv://username:password@cluster.mongodb.net/foodApp?retryWrites=true&w=majority
+💳 Stripe Configuration
 
-Create Stripe account
+Create a Stripe account
 
 Go to Developers → API Keys
 
@@ -174,16 +167,16 @@ Copy Secret Key
 Add it to backend .env
 
 STRIPE_SECRET_KEY=sk_test_xxxxxxxxxxxxx
-🔥 Common Issues & Fixes
-❌ ERR_CONNECTION_REFUSED
+❗ Common Issues & Solutions
+ERR_CONNECTION_REFUSED
 
-Make sure frontend backend URL matches backend port.
+Ensure frontend backend URL matches backend port (default: 5000).
 
-❌ Database authentication failed
+MongoDB Authentication Failed
 
-Check MongoDB username/password and network access.
+Check username/password and network access settings.
 
-❌ Stripe API error
+Stripe API Error
 
-Make sure STRIPE_SECRET_KEY is added in .env.
+Verify STRIPE_SECRET_KEY in backend .env.
 
